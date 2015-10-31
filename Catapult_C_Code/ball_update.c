@@ -10,7 +10,7 @@
 void ball_update(ac_int<PIXEL_WL, false> * video_in,ac_int<(COORD_WL+COORD_WL),false> *vga_xy, ac_int<PIXEL_WL,false> *video_out,ac_int<10,false> *ball_x_out, ac_int<10,false> *ball_y_out,ac_int<1,false> switch1 , ac_int <1,false> switch2,ac_int<3,false> *left, ac_int<3,false> *right){
 
 	ac_int<10,false> i_red, i_green, i_blue; // current pixel
-    ac_int<10,false> o_red, o_green, o_blue; // output pixel
+        ac_int<10,false> o_red, o_green, o_blue; // output pixel
 	ac_int<COORD_WL,false> vga_x,vga_y;
 	static ac_int<3,false> state; 			// ball state determines its direction ( up,down,left,right etc), ranges from 1 - 4
 	static ac_int<10, false> ball_x, ball_y;	// x and y coordinates of the ball
@@ -24,11 +24,11 @@ void ball_update(ac_int<PIXEL_WL, false> * video_in,ac_int<(COORD_WL+COORD_WL),f
 	// slicing the data stream to receive x-y coordinates of the monitor, RGB value of the pixel in that particular x-y coordinate
 
 	i_red = (*video_in).slc<COLOR_WL>(20);
-    i_green = (*video_in).slc<COLOR_WL>(10);
-    i_blue = (*video_in).slc<COLOR_WL>(0);
+        i_green = (*video_in).slc<COLOR_WL>(10);
+        i_blue = (*video_in).slc<COLOR_WL>(0);
 	
 	vga_x = (*vga_xy).slc<COORD_WL>(0);
-    vga_y = (*vga_xy).slc<COORD_WL>(10);
+    	vga_y = (*vga_xy).slc<COORD_WL>(10);
 	
 	// game initialization
 
