@@ -4,7 +4,7 @@
 
 This project utilises a Field Programmable Gate Array ( FPGA ) to implement a two player Pong game whereby the players control the movement of the paddles with a specified colour.
 
-This project is made by Wei Jian Wong and Malhar Jajoo.
+This project is made by [Wei Jian Wong](https://github.com/Jiantastic) and Malhar Jajoo.
 
 
 ## Hardware and Tools used
