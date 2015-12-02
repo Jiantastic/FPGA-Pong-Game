@@ -13,33 +13,33 @@
 #pragma hls_design top
 void print_board(ac_int<(COORD_WL+COORD_WL), false> *vga_xy,ac_int<PIXEL_WL, false> *video_in,ac_int<COORD_WL,false> *ball_x_in, ac_int<COORD_WL,false> *ball_y_in,ac_int<PIXEL_WL,false> *video_out,ac_int<3,false> *right_count,ac_int<3,false> *left_count,ac_int<30,false> *YUV_out) // 50 bit video out
 {
-    ac_int<10,false> i_red, i_green, i_blue; // current pixel
-    ac_int<10,false> o_red, o_green, o_blue; // output pixel
-    ac_int<10,false> YUV_red, YUV_green, YUV_blue;
-    ac_int<10,false> vga_x, vga_y,  		 // screen coordinates
-    ac_int<20,true> mat_1,mat_2,mat_3,V;	
-    static ac_int<10,false> red_detect = 0;
+    	ac_int<10,false> i_red, i_green, i_blue; // current pixel
+    	ac_int<10,false> o_red, o_green, o_blue; // output pixel
+    	ac_int<10,false> YUV_red, YUV_green, YUV_blue;
+    	ac_int<10,false> vga_x, vga_y,  		 // screen coordinates
+    	ac_int<20,true> mat_1,mat_2,mat_3,V;	
+    	static ac_int<10,false> red_detect = 0;
 
-    i_red = (*video_in).slc<COLOR_WL>(20);
-    i_green = (*video_in).slc<COLOR_WL>(10);
-    i_blue = (*video_in).slc<COLOR_WL>(0);
+    	i_red = (*video_in).slc<COLOR_WL>(20);
+    	i_green = (*video_in).slc<COLOR_WL>(10);
+    	i_blue = (*video_in).slc<COLOR_WL>(0);
 
     // extract VGA pixel X-Y coordinates from data stream slice
-    vga_x = (*vga_xy).slc<COORD_WL>(0);
-    vga_y = (*vga_xy).slc<COORD_WL>(10);
+    	vga_x = (*vga_xy).slc<COORD_WL>(0);
+    	vga_y = (*vga_xy).slc<COORD_WL>(10);
 
     // does a mathematical operation to convert RGB ( red-green-blue color model ) to YUV color model
     // this is done as the YUV model is less affected by changes in the ambient condition, to be exact - the lighting of the environment
 	
-    mat_1 = i_red * 127;
-    mat_2 = i_green * (-106);
-    mat_3 = i_blue * (-21);
+        mat_1 = i_red * 127;
+        mat_2 = i_green * (-106);
+        mat_3 = i_blue * (-21);
 	
-    V = mat_1 + mat_2 + mat_3;
+    	V = mat_1 + mat_2 + mat_3;
 	
-    V = ( V + 128) >> 8;
+	V = ( V + 128) >> 8;
 	
-    V = V + 128;
+    	V = V + 128;
 
 	o_red = 0;
 	o_green = 0;
