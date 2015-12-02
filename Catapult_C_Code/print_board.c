@@ -108,7 +108,7 @@ void print_board(ac_int<(COORD_WL+COORD_WL), false> *vga_xy,ac_int<PIXEL_WL, fal
 	// Pong game video output to monitor
 	
 	*video_out = ((((ac_int<PIXEL_WL, false>)o_red) << 20) | (((ac_int<PIXEL_WL, false>)o_green) << 10) | (ac_int<PIXEL_WL, false>)o_blue);
-	
+
 	// YUV_out is a separate data stream to analyse the YUV color model ( color conversion from RGB -> YUV )
 	
 	*YUV_out = ((((ac_int<PIXEL_WL, false>)YUV_red) << 20) | (((ac_int<PIXEL_WL, false>)YUV_green) << 10) | (ac_int<PIXEL_WL, false>)YUV_blue);	
