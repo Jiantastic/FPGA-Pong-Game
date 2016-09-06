@@ -2,7 +2,7 @@
 
 ![FPGA Pong game in action!](https://raw.githubusercontent.com/Jiantastic/jiantastic.github.io/master/Images/FPGA-Pong-Game.JPG)
 
-This project utilises a Field Programmable Gate Array ( FPGA ) to implement a two player Pong game whereby the players control the movement of the paddles with a specified colour.
+This project utilises a Field Programmable Gate Array ( FPGA ) to implement a two player Pong game whereby the players control the movement of the paddles (user input via camera) with a specified colour.
 
 This project is made by [Wei Jian Wong](https://github.com/Jiantastic) and [Malhar Jajoo](https://github.com/malharjajoo).
 
