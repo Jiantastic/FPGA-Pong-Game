@@ -1,6 +1,6 @@
 # FPGA-Color-Detection-Pong-Game
 
-![FPGA Pong game in action!](https://raw.githubusercontent.com/Jiantastic/jiantastic.github.io/master/Images/FPGA-Pong-Game.JPG)
+![FPGA Pong game in action!](https://raw.githubusercontent.com/Jiantastic/FPGA-Pong-Game/master/images/FPGA-Pong-Game.JPG)
 
 This project utilises a Field Programmable Gate Array ( FPGA ) to implement a two player Pong game whereby the players control the movement of the paddles (user input via camera) with a specified colour.
 
