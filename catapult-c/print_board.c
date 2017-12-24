@@ -1,5 +1,5 @@
 /* this module gets the data from ball_update.c ( which updates the position of the ball on the monitor )
-   and draws the white pixels on the black background of the monitor - the white pixels here https://raw.githubusercontent.com/Jiantastic/jiantastic.github.io/master/Images/FPGA-Pong-Game.JPG
+   and draws the white pixels on the black background of the monitor - the white pixels here https://raw.githubusercontent.com/Jiantastic/FPGA-Pong-Game/master/images/FPGA-Pong-Game.JPG
    to correspond to user input ( left and right paddles ) + ball position
 */
 
